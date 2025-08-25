@@ -1,0 +1,141 @@
+/* === Modern Futuristic Dark Theme Enhanced === */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0a0f1c, #050810);
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 0.3s ease;
+}
+
+/* Header */
+header {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.logo {
+  width: 90px;
+  margin-bottom: 1rem;
+  animation: logoGlow 2s infinite alternate;
+}
+
+@keyframes logoGlow {
+  0% { filter: drop-shadow(0 0 2px #38bdf8);}
+  100% { filter: drop-shadow(0 0 20px #38bdf8);}
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin: 0.5rem 0;
+  background: linear-gradient(90deg, #38bdf8, #facc15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(56,189,248,0.5), 0 0 20px rgba(250,204,21,0.5);
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: #94a3b8;
+  margin-top: 0.5rem;
+}
+
+/* Chat container */
+/* Chat container – full immersive height */
+.chat-container {
+  width: 98%;
+  max-width: 2000px;
+  height: 80vh; /* fill 80% of viewport height */
+  min-height: 650px; /* ensure a minimum for smaller screens */
+  min-width: 1000px;
+  background: #111827;
+  border-radius: 28px;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.75), inset 0 0 15px rgba(56,189,248,0.2);
+  overflow: hidden;
+  margin-top: 2rem;
+  border: 2px solid rgba(56,189,248,0.3);
+  display: flex;
+  flex-direction: column;
+  padding: 0; /* remove padding to maximize iframe */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+/* Ensure iframe fills entire container */
+.chat-container iframe {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0; /* full container corners */
+  background: #0f172a;
+  box-shadow: inset 0 0 30px rgba(56,189,248,0.25);
+}
+
+
+.chat-container:hover {
+  transform: translateY(-3px) scale(1.015);
+  box-shadow: 0 35px 90px rgba(0,0,0,0.85), inset 0 0 20px rgba(56,189,248,0.25);
+  border: 2px solid #38bdf8;
+}
+
+/* Example prompts */
+.examples {
+  margin-top: 2rem;
+  padding: 2rem;
+  width: 95%;
+  max-width: 1100px;
+  background: #111827;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.examples:hover {
+  background: #0f172a;
+  transform: translateY(-5px);
+}
+
+.examples h2 {
+  color: #facc15;
+  font-size: 1.9rem;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 0 10px #facc15, 0 0 25px rgba(250,204,21,0.5);
+}
+
+.examples ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.examples li {
+  margin: 1rem 0;
+  padding: 1rem 1.5rem;
+  background: #0f172a;
+  border-left: 5px solid #38bdf8;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.examples li::before {
+  content: "💡";
+  position: absolute;
+  left: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.examples li:hover {
+  transform: translateX(10px) scale(1.05);
+  background: linear-gradient(90deg, #0f172a, #1e293b);
+  box-shadow: 0 8px 35px rgba(56,189,248,0.5), 0 0 15px #38bdf8 inset;
+}
