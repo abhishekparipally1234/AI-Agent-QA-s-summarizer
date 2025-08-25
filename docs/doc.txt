@@ -1,0 +1,1 @@
+This folder is for the documents which constitute the knowledge base of the agent 
